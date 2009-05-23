@@ -4,6 +4,9 @@
 		activeBuildConfigurationName = Debug;
 		activeExecutable = A9F51E5B0FAB433C00AD6433 /* oop_lab5 */;
 		activeTarget = 8DD76F620486A84900D96B5E /* oop_lab5 */;
+		addToTargets = (
+			8DD76F620486A84900D96B5E /* oop_lab5 */,
+		);
 		codeSenseManager = A9F51E620FAB435000AD6433 /* Code sense */;
 		executables = (
 			A9F51E5B0FAB433C00AD6433 /* oop_lab5 */,
@@ -14,9 +17,9 @@
 				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
 				PBXFileTableDataSourceColumnWidthsKey = (
 					20,
-					341,
+					685,
 					20,
-					48.16259765625,
+					48,
 					43,
 					43,
 					20,
@@ -31,11 +34,19 @@
 					PBXFileDataSource_Target_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 262882108;
-			PBXWorkspaceStateSaveDate = 262882108;
+			PBXPerProjectTemplateStateSaveDate = 264509543;
+			PBXWorkspaceStateSaveDate = 264509543;
 		};
 		sourceControlManager = A9F51E610FAB435000AD6433 /* Source Control */;
 		userBuildSettings = {
+		};
+	};
+	08FB7796FE84155DC02AAC07 /* main.cpp */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {797, 1600}}";
+			sepNavSelRange = "{2949, 0}";
+			sepNavVisRange = "{0, 1466}";
+			sepNavWindowFrame = "{{296, 106}, {856, 672}}";
 		};
 	};
 	8DD76F620486A84900D96B5E /* oop_lab5 */ = {
@@ -43,6 +54,14 @@
 		executables = (
 			A9F51E5B0FAB433C00AD6433 /* oop_lab5 */,
 		);
+	};
+	A9BA9BE70FC4187800B1146A /* my_vector.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {886, 2976}}";
+			sepNavSelRange = "{3099, 0}";
+			sepNavVisRange = "{2927, 401}";
+			sepNavWindowFrame = "{{212, 99}, {813, 646}}";
+		};
 	};
 	A9F51E5B0FAB433C00AD6433 /* oop_lab5 */ = {
 		isa = PBXExecutable;
@@ -57,6 +76,7 @@
 		customDataFormattersEnabled = 1;
 		debuggerPlugin = GDBDebugging;
 		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
 		enableDebugStr = 1;
 		environmentEntries = (
 		);

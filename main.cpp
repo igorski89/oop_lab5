@@ -19,6 +19,7 @@
 #include <string>
 #include <vector>
 #include <fstream>
+#include "my_vector.h"
 
 using namespace std;
 
@@ -40,25 +41,28 @@ bool contains_non_characters(string s){
 
 int main (int argc, char * const argv[]) {
     bool use_non_characters = false;
-    cout << "use non-characters?:";
-    char c[2]; 
-    cin >> c;
-    if (c[0] == 'y') use_non_characters = true;
+//    cout << "use non-characters?:";
+//    char c[2]; 
+//    cin >> c;
+//    if (c[0] == 'y') use_non_characters = true;
     
     
     char filename[] = "words.txt";
-    vector<string> lines;
+//    vector<string> lines;
+    MyVector<string> lines;
     cout << "reading words from " << filename << endl;
     ifstream data_in(filename, ios_base::in);
     while(!data_in.eof()){
         string tmp_line;
         getline(data_in,tmp_line);
-        lines.push_back(tmp_line);
+        //lines.push_back(tmp_line);
+        lines.add(tmp_line);
     }
     data_in.close();
     
     cout << "readed words: " << endl;
-    for (vector<string>::iterator it=lines.begin(); it < lines.end(); it++) {
+//    for (vector<string>::iterator it=lines.begin(); it < lines.end(); it++) {
+    for (MyVector<string>::iterator it=lines.begin(); it < lines.end(); it++) {
         cout << *it << endl;
         if (contains_non_characters(*it) && !use_non_characters) {
             cout << "contains non characters... aborting program" << endl;
@@ -74,9 +78,9 @@ int main (int argc, char * const argv[]) {
             cout << "containst non-characters, ignoring word" << endl;
             continue;
         }
-        for (vector<string>::iterator it=lines.begin(); it < lines.end(); it++) {
+        for (MyVector<string>::iterator it=lines.begin(); it < lines.end(); it++) {
             if (line.compare(*it) < 0){
-                lines.insert(it, line);
+                lines.insert(*it, line);
                 break;
             }
         }
@@ -84,7 +88,7 @@ int main (int argc, char * const argv[]) {
     cout << "words input ended" << endl;
     
     cout << "result list: " << endl;
-    for (vector<string>::iterator it=lines.begin(); it < lines.end(); it++)
+    for (MyVector<string>::iterator it=lines.begin(); it < lines.end(); it++)
         cout << *it << endl;
     //записывам список обратно в файл
 //    ofstream data_out(filename, ios_base::out | ios_base::trunc);
